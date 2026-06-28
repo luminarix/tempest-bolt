@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tempest brand palette — https://tempestphp.com/3.x/extra-topics/contributing#brand-guidelines */
+@theme {
+  --color-brand-surface: #1b1429;
+  --color-brand-blue: #0071bc;
+  --color-brand-sky: #29abe2;
+  --color-brand-cyan: #00e7ff;
+}
+
+/* Semantic tokens that switch with the active theme. */
+@theme inline {
+  --color-surface: var(--bolt-surface);
+  --color-raised: var(--bolt-raised);
+  --color-line: var(--bolt-line);
+  --color-ink: var(--bolt-ink);
+  --color-faint: var(--bolt-faint);
+  --color-accent: var(--bolt-accent);
+}
+
+:root {
+  --bolt-surface: #ffffff;
+  --bolt-raised: #f4f4f5;
+  --bolt-line: #e4e4e7;
+  --bolt-ink: #18181b;
+  --bolt-faint: #71717a;
+  --bolt-accent: #0071bc;
+}
+
+.dark {
+  --bolt-surface: #1b1429;
+  --bolt-raised: #161021;
+  --bolt-line: rgba(255, 255, 255, 0.1);
+  --bolt-ink: #f4f4f5;
+  --bolt-faint: #a1a1aa;
+  --bolt-accent: #00e7ff;
+}
+
+html,
+body,
+#bolt-root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bolt-surface);
+  color: var(--bolt-ink);
+}

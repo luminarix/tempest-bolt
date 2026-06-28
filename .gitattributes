@@ -1,0 +1,9 @@
+/art export-ignore
+/tests export-ignore
+/phpunit.xml export-ignore
+/.gitignore export-ignore
+/resources export-ignore
+/package.json export-ignore
+/bun.lock export-ignore
+/vite.config.ts export-ignore
+/tsconfig.json export-ignore
