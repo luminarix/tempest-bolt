@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tempest\Bolt;
 
 use Psy\Configuration;
+use Psy\Output\Theme;
 use Psy\Shell;
 use Tempest\Core\Kernel;
 
@@ -13,7 +14,8 @@ final readonly class PsyshBoltShell implements BoltShell
     public function run(array $scopeVariables): int
     {
         $configuration = new Configuration();
-        $configuration->setPrompt('bolt> ');
+        $configuration->setTheme(Theme::MODERN_THEME);
+        $configuration->theme()->setPrompt('bolt> ');
         $configuration->setStartupMessage(sprintf('Bolt shell for Tempest %s', Kernel::VERSION));
 
         $shell = new Shell($configuration);
